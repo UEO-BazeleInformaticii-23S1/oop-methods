@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ConsoleHelper.Print("test");
+
+            ConsoleHelper.Print("label", "test");
+
+            ConsoleHelper.Print("test", 3);
         }
     }
 }
