@@ -50,7 +50,7 @@
             };
 
             Console.WriteLine($"Before calling SayHello: {p.LastName} {p.FirstName}");
-            SayHello( p );
+            SayHello2( p );
             Console.WriteLine($"After calling SayHello: {p.LastName} {p.FirstName}");
         }
 
@@ -66,7 +66,17 @@
             Console.WriteLine($"Before SayHello change name: {p.LastName} {p.FirstName}");
             p.LastName = "Changed";
             Console.WriteLine($"After SayHello change name: {p.LastName} {p.FirstName}");
+        }
 
+        private static void SayHello2(Person p)
+        {
+            Console.WriteLine($"Before SayHello change name: {p.LastName} {p.FirstName}");
+            p = new Person
+            {
+                FirstName = "John",
+                LastName = "Changed"
+            };
+            Console.WriteLine($"After SayHello change name: {p.LastName} {p.FirstName}");
         }
     }
 }
