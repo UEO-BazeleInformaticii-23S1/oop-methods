@@ -42,7 +42,7 @@
             IncrementWithOut(i, out i);
             Console.WriteLine($"After calling increment: {i}");
             
-            Person p = new Person();
+           
 
             /*
             Person p = new Person

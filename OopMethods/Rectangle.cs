@@ -36,7 +36,7 @@ namespace OopMethods
         {
         }
 
-        public Rectangle(Point topLeft, Point bottomRight, int width, int height)
+        private Rectangle(Point topLeft, Point bottomRight, int width, int height)
         {
             if (topLeft.X > bottomRight.X || topLeft.Y > bottomRight.Y)
             {
