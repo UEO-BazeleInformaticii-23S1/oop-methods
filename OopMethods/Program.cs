@@ -39,10 +39,11 @@
             /*
             int i = 10;
             Console.WriteLine($"Before calling increment: {i}");
-            Increment(i);
+            Increment(ref i);
             Console.WriteLine($"After calling increment: {i}");
             */
 
+           
             Person p = new Person
             {
                 FirstName = "John",
@@ -50,25 +51,26 @@
             };
 
             Console.WriteLine($"Before calling SayHello: {p.LastName} {p.FirstName}");
-            SayHello2( p );
+            SayHello2(ref p);
             Console.WriteLine($"After calling SayHello: {p.LastName} {p.FirstName}");
+            
         }
 
-        private static void Increment(int i)
+        private static void Increment(ref int i)
         {
             Console.WriteLine($"Before increment: {i}");
             i = i + 1;
             Console.WriteLine($"After increment: {i}");
         }
 
-        private static void SayHello(Person p)
+        private static void SayHello(ref Person p)
         {
             Console.WriteLine($"Before SayHello change name: {p.LastName} {p.FirstName}");
             p.LastName = "Changed";
             Console.WriteLine($"After SayHello change name: {p.LastName} {p.FirstName}");
         }
 
-        private static void SayHello2(Person p)
+        private static void SayHello2(ref Person p)
         {
             Console.WriteLine($"Before SayHello change name: {p.LastName} {p.FirstName}");
             p = new Person
