@@ -36,14 +36,15 @@
             Console.WriteLine("Price=" + PriceCalculator.CalculatePrice(vatPercent: 9, quantity: 5, unitPrice: 20));
             */
 
-            /*
+
             int i = 10;
             Console.WriteLine($"Before calling increment: {i}");
-            Increment(ref i);
+            IncrementWithOut(i, out i);
             Console.WriteLine($"After calling increment: {i}");
-            */
+            
+            Person p = new Person();
 
-           
+            /*
             Person p = new Person
             {
                 FirstName = "John",
@@ -53,7 +54,7 @@
             Console.WriteLine($"Before calling SayHello: {p.LastName} {p.FirstName}");
             SayHello2(ref p);
             Console.WriteLine($"After calling SayHello: {p.LastName} {p.FirstName}");
-            
+            */
         }
 
         private static void Increment(ref int i)
@@ -61,6 +62,13 @@
             Console.WriteLine($"Before increment: {i}");
             i = i + 1;
             Console.WriteLine($"After increment: {i}");
+        }
+
+        private static void IncrementWithOut(int prevValue, out int afterIncrementValue)
+        {
+            Console.WriteLine($"Before increment: {prevValue}");
+            afterIncrementValue = prevValue + 1;
+            Console.WriteLine($"After increment: {afterIncrementValue}");
         }
 
         private static void SayHello(ref Person p)
