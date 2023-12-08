@@ -36,13 +36,27 @@
             Console.WriteLine("Price=" + PriceCalculator.CalculatePrice(vatPercent: 9, quantity: 5, unitPrice: 20));
             */
 
-
             int i = 10;
             Console.WriteLine($"Before calling increment: {i}");
             IncrementWithOut(i, out i);
             Console.WriteLine($"After calling increment: {i}");
+
+            Point pt1 = new Point();
+            Point pt2 = new Point
+            {
+                X = 100,
+                Y = 200
+            };
+
             
-           
+            Person p = new Person
+            {
+                FirstName = "John",
+                LastName = "Doe",
+                DateOfBirth = new DateTime(2000, 11, 27)
+            };
+
+            //Rectangle r = new Rectangle(new Point(100, 100), 50, 70);
 
             /*
             Person p = new Person
