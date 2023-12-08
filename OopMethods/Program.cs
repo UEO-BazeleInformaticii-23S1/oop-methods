@@ -4,6 +4,9 @@
     {
         static void Main(string[] args)
         {
+            int[] arrayOfNumber = new int[10];
+            Rectangle[] arrayOfRectangles = new Rectangle[10];
+
             /*
             ConsoleHelper.Print("test");
 
